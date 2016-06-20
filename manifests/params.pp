@@ -7,6 +7,7 @@ class centrify::params {
     default: {
       fail("${::operatingsystem} not supported")
     }
+  }
       $dc_package_version              = 'installed'
       $nis_package_version             = 'installed'
       $dc_service_name                 = 'centrifydc'
