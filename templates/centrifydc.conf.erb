@@ -1,0 +1,40 @@
+log: INFO
+pam.allow.override: root
+
+pam.homedir.create: false
+
+adclient.clients.socket: /var/centrifydc/daemon
+adclient.clients.socket2: /var/centrifydc/daemon2
+adclient.custom.attributes.user: unixUserPassword msSFU30Password
+
+adclient.clients.listen.backlog: <%= @adclient_clients_listen_backlog %>
+adclient.cache.expires.gc: <%= @adclient_cache_expires_gc %>
+adclient.cache.expires: <%= @adclient_cache_expires %>
+adclient.paged.search.max: <%= @adclient_paged_search_max %>
+adclient.ldap.timeout: <%= @adclient_ldap_timeout %>
+adclient.zone.group.count: <%= @adclient_zone_group_count %>
+adclient.clients.threads: <%= @adclient_clients_threads %>
+adclient.cache.flush.interval: <%= @adclient_cache_flush_interval %>
+
+nss.nobody.user: nobody
+nss.nobody.group: nobody
+nss.nobody.uid: 99
+nss.nobody.gid: 99
+nss.program.ignore: useradd,adduser,groupadd,addgroup,userdel,groupdel,usermod,groupmod,chfn,chsh,chpasswd,gpasswd,pwconv,pwunconv,grpconv,grpunconv,redhat-config-users,unix_chkpwd
+nss.shell.nologin: /sbin/nologin
+nss.runtime.defaultvalue.var.home: /home
+nss.runtime.defaultvalue.var.shell: /bin/bash
+nss.runtime.defaultvalue.var.zone: $ZONE
+nss.runtime.defaultvalue.var.host: $HOSTNAME
+nss.runtime.defaultvalue.var.site: $SITE
+nss.runtime.defaultvalue.var.domain: $DOMAIN
+
+
+<% if @nis -%>
+#nis
+nisd.securenets: <%= @nis_networks.join(',') %>
+nisd.update.interval: <%= @nis_update_interval %>
+nisd.threads: <%= @nis_threads %>
+nisd.startup.delay: <%= @nis_startup_delay %>
+nisd.maps.max: <%= @nis_maps_max %>
+<% end -%>
