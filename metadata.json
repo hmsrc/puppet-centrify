@@ -1,0 +1,15 @@
+{
+  "name": "sjoeboo-centrify",
+  "version": "0.1.0",
+  "author": "sjoeboo",
+  "summary": "installs/configs centrify (does adjoin), optionally as a nis server",
+  "license": "Apache-2.0",
+  "source": "https://github.com/sjoeboo/puppet-centrify",
+  "project_page": "https://github.com/sjoeboo/puppet-centrify",
+  "issues_url": "https://github.com/sjoeboo/puppet-centrify/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
