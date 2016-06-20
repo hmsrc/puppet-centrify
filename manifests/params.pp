@@ -20,10 +20,10 @@ class centrify::params {
       $dc_domain                       = undef
       $nis                             = false
       $nis_networks                    = ['0/0'] #array for nets to serve nis to, in 192.168.1.0/255.255.255.0 format.
-      $nis_update_interval             = 1200,
-      $nis_threads                     = 4,
-      $nis_startup_delay               = 60,
-      $nis_maps_max                    = 2,
+      $nis_update_interval             = 1200
+      $nis_threads                     = 4
+      $nis_startup_delay               = 60
+      $nis_maps_max                    = 2
       $adclient_clients_listen_backlog = 200
       $adclient_cache_expires_gc       = 600
       $adclient_cache_expires          = 600
