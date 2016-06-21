@@ -15,7 +15,7 @@ class centrify::join (
     }
     exec { 'adjoin':
       path    => '/usr/bin:/usr/sbin:/bin',
-      command => ,
+      command => $join_cmd,
       unless  => "adinfo -d | grep ${dc_domain}",
       notify  => Exec['run_adflush_and_adreload'],
     }
