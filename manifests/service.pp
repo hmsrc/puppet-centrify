@@ -3,8 +3,7 @@ class centrify::service (
   $dc_service_name  = $centrify::service_name,
   $nis_service_name = $centrify::nis_service_name,
   $dc_config_file   = $centrify::dc_config_file,
-
-  ){
+  ) {
 
     service { $dc_service_name:
       ensure     => running,
