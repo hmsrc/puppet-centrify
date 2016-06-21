@@ -25,13 +25,10 @@ class centrify (
   Integer $adclient_cache_flush_interval   = $centrify::params::adclient_cache_flush_interval,
   ) inherits centrify::params {
 
-    include ::centrify::install
-    include ::centrify::config
-    include ::centrify::join
-    include ::centrify::service
+
 
     class {'::centrify::install': } ->
-    class {'::centrify::config': } ~>
-    class {'::centrify::join': } ~>
+    class {'::centrify::config': } ->
+    class {'::centrify::join': } ->
     class {'::centrify::service:': }
 }
