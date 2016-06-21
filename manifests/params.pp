@@ -17,6 +17,7 @@ class centrify::params {
       $dc_container                    = undef
       $dc_join_user                    = undef
       $dc_join_passwd                  = undef
+      $dc_join_dnsname                 = undef
       $dc_domain                       = undef
       $nis                             = false
       $nis_networks                    = ['0/0'] #array for nets to serve nis to, in 192.168.1.0/255.255.255.0 format.

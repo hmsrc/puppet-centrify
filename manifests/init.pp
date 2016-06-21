@@ -9,6 +9,7 @@ class centrify (
   String $dc_join_user                     = $centrify::params::dc_join_user,
   String $dc_join_passwd                   = $centrify::params::dc_join_passwd,
   String $dc_domain                        = $centrify::params::dc_domain,
+  Optional[String] $dc_join_dnsname        = $centrify::params::dc_join_dnsname,
   Boolean $nis                             = $centrify::params::nis,
   Array $nis_networks                      = $centrify::params::nis_networks,
   Integer $nis_update_interval             = $centrify::params::nis_update_interval,
