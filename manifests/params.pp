@@ -26,6 +26,8 @@ class centrify::params {
       $nis_startup_delay               = 60
       $nis_maps_max                    = 2
       $nis_maps_exluded                = []
+      $nis_port_tcp                    = undef
+      $nis_port_udp                    = undef
       $adclient_clients_listen_backlog = 200
       $adclient_cache_expires_gc       = 600
       $adclient_cache_expires          = 600

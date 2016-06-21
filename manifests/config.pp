@@ -7,6 +7,8 @@ class centrify::config (
   $nis_startup_delay               = $centrify::nis_startup_delay,
   $nis_maps_max                    = $centrify::nis_maps_max,
   $nis_maps_exluded                = $centrify::nis_maps_exluded,
+  $nis_port_tcp                    = $centrify::nis_port_tcp,
+  $nis_port_udp                    = $centrify::nis_port_udp,
   $adclient_clients_listen_backlog = $centrify::adclient_clients_listen_backlog,
   $adclient_cache_expires_gc       = $centrify::adclient_cache_expires_gc,
   $adclient_cache_expires          = $centrify::adclient_cache_expires,

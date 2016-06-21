@@ -17,6 +17,8 @@ class centrify (
   Integer          $nis_startup_delay               = $centrify::params::nis_startup_delay,
   Integer          $nis_maps_max                    = $centrify::params::nis_maps_max,
   Array            $nis_maps_exluded                = $centrify::params::nis_maps_exluded,
+  Optional[Integer] $nis_port_tcp                   = $centrify::params::nis_port_tcp,
+  Optional[Integer] $nis_port_udp                   = $centrify::params::nis_port_udp,
   Integer          $adclient_clients_listen_backlog = $centrify::params::adclient_clients_listen_backlog,
   Integer          $adclient_cache_expires_gc       = $centrify::params::adclient_cache_expires_gc,
   Integer          $adclient_cache_expires          = $centrify::params::adclient_cache_expires,

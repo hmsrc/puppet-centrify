@@ -40,4 +40,10 @@ nisd.maps.max: <%= @nis_maps_max %>
 <% if @nis_maps_exluded -%>
 nisd.exclude.maps: <%= @nis_maps_exluded.join(' ') %>
 <% end -%>
+<% if @nis_port_tcp -%>
+nisd.port.tcp: <%= @nis_port_tcp %>
+<% end -%>
+<% if @nis_port_udp -%>
+nisd.port.udp: <%= @nis_port_udp %>
+<% end -%>
 <% end -%>
