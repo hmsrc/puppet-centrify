@@ -14,14 +14,15 @@ class centrify::config (
   $adclient_zone_group_count       = $centrify::adclient_zone_group_count,
   $adclient_clients_threads        = $centrify::adclient_clients_threads,
   $adclient_cache_flush_interval   = $centrify::adclient_cache_flush_interval,
+  $dc_package_name                 = $centrify::dc_package_name,
   ) {
-
     file {$dc_config_file:
       ensure   => file,
       owner    => 'root',
       group    => 'root',
       mode     => '0644',
       contents => template('centrify/centrifydc.conf.erb'),
+      require  => Package[$dc_package_name],
     }
 
 }
