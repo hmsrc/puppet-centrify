@@ -37,4 +37,7 @@ nisd.update.interval: <%= @nis_update_interval %>
 nisd.threads: <%= @nis_threads %>
 nisd.startup.delay: <%= @nis_startup_delay %>
 nisd.maps.max: <%= @nis_maps_max %>
+<% if @nis_maps_exluded -%>
+nisd.exclude.maps: <%= @nis_maps_exluded.join(' ') %>
+<% end -%>
 <% end -%>
