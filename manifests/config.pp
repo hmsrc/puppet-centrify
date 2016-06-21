@@ -1,6 +1,7 @@
 class centrify::config (
   $dc_config_file                  = $centrify::dc_config_file,
   $nis                             = $centrify::nis,
+  $nis_networks                    = $centrify::nis_networks,
   $nis_update_interval             = $centrify::nis_update_interval,
   $nis_threads                     = $centrify::nis_threads,
   $nis_startup_delay               = $centrify::nis_startup_delay,
