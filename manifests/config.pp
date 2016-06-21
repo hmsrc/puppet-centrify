@@ -17,12 +17,12 @@ class centrify::config (
   $dc_package_name                 = $centrify::dc_package_name,
   ) {
     file {$dc_config_file:
-      ensure   => file,
-      owner    => 'root',
-      group    => 'root',
-      mode     => '0644',
-      contents => template('centrify/centrifydc.conf.erb'),
-      require  => Package[$dc_package_name],
+      ensure  => file,
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      content => template('centrify/centrifydc.conf.erb'),
+      require => Package[$dc_package_name],
     }
 
 }
