@@ -1,6 +1,6 @@
 class centrify::service (
   $nis              = $centriy::nis,
-  $dc_service_name  = $centrify::service_name,
+  $dc_service_name  = $centrify::dc_service_name,
   $nis_service_name = $centrify::nis_service_name,
   $dc_config_file   = $centrify::dc_config_file,
   ) {
