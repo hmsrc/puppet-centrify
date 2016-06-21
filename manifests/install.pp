@@ -13,5 +13,8 @@ class centrify::install (
       package {$nis_package_name:
         ensure => $nis_package_version,
       }
+      package {'rpbind':
+        ensure => installed,
+      }
     }
   }
