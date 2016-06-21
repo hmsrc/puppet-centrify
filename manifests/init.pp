@@ -26,7 +26,12 @@ class centrify (
   ) inherits centrify::params {
 
     class {'::centrify::install': } ->
-    class {'::centrify::config': } ->
-    class {'::centrify::join': } ->
+    class {'::centrify::config': } ~>
+    class {'::centrify::join': } ~>
     class {'::centrify::service:': }
+
+    contain '::centrify::install'
+    contain '::centrify::config'
+    contain '::centrify::join'
+    contain '::centrify::service'
 }
