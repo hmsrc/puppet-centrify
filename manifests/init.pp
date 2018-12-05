@@ -27,6 +27,7 @@ class centrify (
   Integer          $adclient_zone_group_count       = $centrify::params::adclient_zone_group_count,
   Integer          $adclient_clients_threads        = $centrify::params::adclient_clients_threads,
   Integer          $adclient_cache_flush_interval   = $centrify::params::adclient_cache_flush_interval,
+  String $adclient_cache_group_membership_visible_check = 'true',
   ) inherits centrify::params {
 
 
