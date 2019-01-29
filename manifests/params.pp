@@ -36,4 +36,5 @@ class centrify::params {
       $adclient_zone_group_count       = 5000
       $adclient_clients_threads        = 2
       $adclient_cache_flush_interval   = 1200
+      $adclient_group_membership_check = false
 }
