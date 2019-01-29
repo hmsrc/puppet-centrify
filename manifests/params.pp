@@ -34,7 +34,7 @@ class centrify::params {
       $adclient_paged_search_max       = 500
       $adclient_ldap_timeout           = 30
       $adclient_zone_group_count       = 5000
-      $adclient_clients_threads        = 2
+      $adclient_clients_threads        = 20
       $adclient_cache_flush_interval   = 1200
       $adclient_group_membership_check = false
 }
