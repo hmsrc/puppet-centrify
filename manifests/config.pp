@@ -19,6 +19,7 @@ class centrify::config (
   $adclient_zone_group_count       = $centrify::adclient_zone_group_count,
   $adclient_clients_threads        = $centrify::adclient_clients_threads,
   $dc_package_name                 = $centrify::dc_package_name,
+  $adclient_cache_object_lifetime  = $centrify::adclient_cache_object_lifetime,
   $centrify_log_level              = $centrify::centrify_log_level,
   ) {
     file {$dc_config_file:
