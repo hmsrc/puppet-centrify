@@ -28,12 +28,15 @@ class centrify::params {
       $nis_maps_exluded                = []
       $nis_port_tcp                    = undef
       $nis_port_udp                    = undef
+      $nis_watch_enabled               = false
+      $nis_log_level                   = 'INFO'
       $adclient_clients_listen_backlog = 200
-      $adclient_cache_expires_gc       = 600
-      $adclient_cache_expires          = 600
+      $adclient_cache_expires_gc       = 3600
+      $adclient_cache_expires          = 1800
+      $adclient_cache_object_lifetime  = 8
       $adclient_paged_search_max       = 500
       $adclient_ldap_timeout           = 30
       $adclient_zone_group_count       = 5000
       $adclient_clients_threads        = 2
-      $adclient_cache_flush_interval   = 1200
+      $centrify_log_level              = 'INFO'
 }
