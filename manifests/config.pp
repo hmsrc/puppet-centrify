@@ -1,6 +1,7 @@
 class centrify::config (
   $dc_config_file                  = $centrify::dc_config_file,
   $nis                             = $centrify::nis,
+  $nis_watch_enabled               = $centrify::nis_watch_enabled,
   $nis_networks                    = $centrify::nis_networks,
   $nis_update_interval             = $centrify::nis_update_interval,
   $nis_threads                     = $centrify::nis_threads,
@@ -9,6 +10,7 @@ class centrify::config (
   $nis_maps_exluded                = $centrify::nis_maps_exluded,
   $nis_port_tcp                    = $centrify::nis_port_tcp,
   $nis_port_udp                    = $centrify::nis_port_udp,
+  $nis_log_level                   = $centrify::nis_log_level,
   $adclient_clients_listen_backlog = $centrify::adclient_clients_listen_backlog,
   $adclient_cache_expires_gc       = $centrify::adclient_cache_expires_gc,
   $adclient_cache_expires          = $centrify::adclient_cache_expires,
@@ -16,8 +18,9 @@ class centrify::config (
   $adclient_ldap_timeout           = $centrify::adclient_ldap_timeout,
   $adclient_zone_group_count       = $centrify::adclient_zone_group_count,
   $adclient_clients_threads        = $centrify::adclient_clients_threads,
-  $adclient_cache_flush_interval   = $centrify::adclient_cache_flush_interval,
   $dc_package_name                 = $centrify::dc_package_name,
+  $adclient_cache_object_lifetime  = $centrify::adclient_cache_object_lifetime,
+  $centrify_log_level              = $centrify::centrify_log_level,
   ) {
     file {$dc_config_file:
       ensure  => file,

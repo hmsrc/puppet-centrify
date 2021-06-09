@@ -1,4 +1,4 @@
-log: INFO
+log: <%= @centrify_log_level %>
 pam.allow.override: root
 
 pam.homedir.create: false
@@ -14,7 +14,7 @@ adclient.paged.search.max: <%= @adclient_paged_search_max %>
 adclient.ldap.timeout: <%= @adclient_ldap_timeout %>
 adclient.zone.group.count: <%= @adclient_zone_group_count %>
 adclient.clients.threads: <%= @adclient_clients_threads %>
-adclient.cache.flush.interval: <%= @adclient_cache_flush_interval %>
+adclient.cache.object.lifetime: <%= @adclient_cache_object_lifetime %>
 
 nss.nobody.user: nobody
 nss.nobody.group: nobody
@@ -51,3 +51,5 @@ secedit.system.access.lockoutbadcount: 5
 secedit.system.access.lockoutduration: 60
 secedit.system.access.maximumpasswordage: 353
 secedit.system.access.minimumpasswordage: 0
+nisd.watch.enabled: <%= @nis_watch_enabled %>
+log.adnisd: <%= @nis_log_level %>
